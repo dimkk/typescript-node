@@ -36,4 +36,6 @@ build
 #Ignore typings
 typings
 
-config.*
+config.dev.json
+config.test.json
+config.prod.json
