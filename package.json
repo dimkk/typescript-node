@@ -1,12 +1,12 @@
 {
-  "name": "typescript-node",
+  "name": "l24u-nodets-template",
   "version": "1.0.0",
   "description": "",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/Talento90/typescript-node.git"
+    "url": ""
   },
-  "author": "Talento90",
+  "author": "Talento90, dimkk",
   "keywords": [
     "typescript",
     "project structure",
@@ -23,6 +23,7 @@
     "watch": "nodemon --watch build/src build/src/index.js"
   },
   "dependencies": {
+    "@types/amqplib": "^0.5.0",
     "bcryptjs": "^2.3.0",
     "boom": "^3.2.2",
     "fs": "0.0.2",
@@ -37,6 +38,7 @@
     "mongoose": "^4.6.1",
     "nconf": "^0.8.4",
     "path": "^0.12.7",
+    "rabbitmq": "0.0.2",
     "vision": "^4.1.0"
   },
   "devDependencies": {
