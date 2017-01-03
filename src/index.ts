@@ -2,6 +2,8 @@ import * as Server from "./server";
 import * as Database from "./database";
 import * as Configs from "./configurations";
 import * as Mq from "./mqlistener";
+import {CommunicationJob} from "./jobs/CommunicationJob";
+import {RPCServer} from "./mqlistener";
 
 console.log(`Running enviroment ${process.env.NODE_ENV || "dev"}`);
 
@@ -16,5 +18,7 @@ console.log(`Running enviroment ${process.env.NODE_ENV || "dev"}`);
 // server.start(() => {
 //     console.log('Server running at:', server.info.uri);
 // });
+const job = new CommunicationJob("communicationJob");
 
-Mq.init(Configs.getCfg().get("mq"));
+
+new RPCServer().start(job);
